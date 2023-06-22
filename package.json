@@ -1,63 +1,54 @@
 {
-  "name": "tippy-wrapper",
-  "version": "0.0.0",
-  "scripts": {
-    "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
-    "watch": "ng build --watch --configuration development",
-    "test": "ng test",
-    "build:lib": "ng build ngx-tippy-wrapper",
-    "build:demo": "ng build ngx-tippy-demo --base-href https://farengeyt451.github.io/ngx-tippy-wrapper/",
-    "serve:demo": "angular-http-server --path dist/ngx-tippy-demo -p 4200",
-    "watch:lib": "ng build ngx-tippy-wrapper --watch",
-    "unit-tests:lib": "ng test ngx-tippy-wrapper",
-    "unit-tests:lib-coverage": "ng test ngx-tippy-wrapper --code-coverage --watch=false --browsers=ChromeHeadlessNoSandbox",
-    "unit-tests:lib-codecov": "cat ./coverage/ngx-tippy-wrapper/**/lcov.info | codecov",
-    "npm-pack": "cd dist/ngx-tippy-wrapper && npm pack",
-    "copy:license": "cp ./LICENSE dist/ngx-tippy-wrapper",
-    "copy:readme": "cp ./README.md dist/ngx-tippy-wrapper",
-    "copy:files": "npm run copy:license",
-    "package": "npm run build:lib && npm run copy:files && npm run npm-pack"
+  "name": "ngx-tippy-wrapper",
+  "version": "6.1.0",
+  "description": "Angular wrapper for tippy.js",
+  "keywords": [
+    "angular tooltip",
+    "angular popover",
+    "angular",
+    "tooltip",
+    "popover",
+    "tippy.js",
+    "library",
+    "tooltip library",
+    "popover library"
+  ],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Alexander Kislov",
+      "email": "alexander-kislov@hotmail.com",
+      "url": "https://github.com/farengeyt451"
+    }
+  ],
+  "homepage": "https://farengeyt451.github.io/ngx-tippy-wrapper/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/farengeyt451/ngx-tippy-wrapper"
   },
-  "private": true,
+  "bugs": "https://github.com/farengeyt451/ngx-tippy-wrapper/issues",
   "dependencies": {
-    "@angular/animations": "^14.2.7",
-    "@angular/common": "^14.2.7",
-    "@angular/compiler": "^14.2.7",
-    "@angular/core": "^14.2.7",
-    "@angular/forms": "^14.2.7",
-    "@angular/platform-browser": "^14.2.7",
-    "@angular/platform-browser-dynamic": "^14.2.7",
-    "@angular/router": "^14.2.7",
-    "@taiga-ui/cdk": "^3.7.1",
-    "@taiga-ui/core": "^3.7.1",
-    "@taiga-ui/icons": "^3.7.1",
-    "@taiga-ui/kit": "^3.7.1",
-    "@taiga-ui/styles": "^3.7.1",
-    "@tinkoff/ng-dompurify": "4.0.0",
-    "dompurify": "2.4.0",
-    "rxjs": "~7.5.7",
     "tslib": "^2.4.0",
-    "zone.js": "~0.11.8"
+    "tippy.js": "^6.3.7"
   },
-  "devDependencies": {
-    "@angular-devkit/build-angular": "^14.2.6",
-    "@angular/cli": "^14.2.6",
-    "@angular/compiler-cli": "^14.2.7",
-    "@types/dompurify": "^2.3.4",
-    "@types/jasmine": "~4.3.0",
-    "@types/node": "^18.11.3",
-    "angular-http-server": "^1.11.1",
-    "codecov": "^3.8.3",
-    "jasmine-core": "~4.4.0",
-    "karma": "~6.4.1",
-    "karma-chrome-launcher": "~3.1.1",
-    "karma-coverage": "~2.2.0",
-    "karma-jasmine": "~5.1.0",
-    "karma-jasmine-html-reporter": "^2.0.0",
-    "ng-packagr": "^14.2.1",
-    "tippy.js": "^6.3.7",
-    "typescript": "~4.7.2"
-  }
+  "module": "fesm2015/ngx-tippy-wrapper.mjs",
+  "es2020": "fesm2020/ngx-tippy-wrapper.mjs",
+  "esm2020": "esm2020/ngx-tippy-wrapper.mjs",
+  "fesm2020": "fesm2020/ngx-tippy-wrapper.mjs",
+  "fesm2015": "fesm2015/ngx-tippy-wrapper.mjs",
+  "typings": "index.d.ts",
+  "exports": {
+    "./package.json": {
+      "default": "./package.json"
+    },
+    ".": {
+      "types": "./index.d.ts",
+      "esm2020": "./esm2020/ngx-tippy-wrapper.mjs",
+      "es2020": "./fesm2020/ngx-tippy-wrapper.mjs",
+      "es2015": "./fesm2015/ngx-tippy-wrapper.mjs",
+      "node": "./fesm2015/ngx-tippy-wrapper.mjs",
+      "default": "./fesm2020/ngx-tippy-wrapper.mjs"
+    }
+  },
+  "sideEffects": false
 }
